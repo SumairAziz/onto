@@ -1,0 +1,2098 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/"
+     xml:base="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:dis="https://disease-ontology.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/">
+        <rdfs:comment rdf:resource="http://purl.org/dc/terms/license"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#SeasonalTrend"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#administers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#administers">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isAdministeredBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#analysisGeneratedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#analysisGeneratedFrom">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#generatesAnalysis"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#approves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#approves">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isApprovedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FinancialApprover"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#calvingEventOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#calvingEventOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasCalvingEvent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#capturedDuring -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#capturedDuring">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasProductionRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#consultsVet -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#consultsVet">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isConsultedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#consumes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#consumes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isConsumedBy"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#diagnoses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#diagnoses">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isDiagnosedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="https://disease-ontology.org/diseases"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedingRecordOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedingRecordOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasFeedingRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#followedByLactation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#followedByLactation">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationFollowsCalving"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#generatesAnalysis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#generatesAnalysis">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#generatesSale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#generatesSale">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#saleGeneratedFrom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasCalvingEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasCalvingEvent">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasFeedingRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasFeedingRecord">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasHealthRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasHealthRecord">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isHealthRecordOf"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasProductionRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasProductionRecord">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasRecord">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isRecordOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasSession -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasSession">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isSessionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasTreatmentEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasTreatmentEvent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isTreatmentEventOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isAdministeredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isAdministeredBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isApprovedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isApprovedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FinancialApprover"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isConsultedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isConsultedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isConsumedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isConsumedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isDiagnosedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isDiagnosedBy">
+        <rdfs:domain rdf:resource="https://disease-ontology.org/diseases"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isHealthRecordOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isHealthRecordOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isManagedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isManagedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#manages"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isOverseenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isOverseenBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isProducedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#produces"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isRecordOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isRecordOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isSessionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isSessionOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isSupervisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isSupervisedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#supervises"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isTreatmentEventOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isTreatmentEventOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationFollowsCalving -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationFollowsCalving">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#manages -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#manages">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#milkRecordedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#milkRecordedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#recordsMilk"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#offspringProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#offspringProducedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BuffaloCalf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowCalf"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#operatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#operatedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#operates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#operates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#operates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#oversees -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#oversees">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#produces">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#recordsMilk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#recordsMilk">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#requiresEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#requiresEquipment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#usedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#saleGeneratedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#saleGeneratedFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#supervises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#supervises">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#treatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#treatedWith">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#usedToTreat"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#usedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#usedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#usedToTreat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#usedToTreat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/about -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/about">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/agent -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/agent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/object -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/object">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/provider -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/provider">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/seller -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/seller">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/worksFor -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/worksFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/breed -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/breed">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/weight -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/weight">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#acquisitionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#acquisitionDate">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#administrationRoute -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#administrationRoute">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#analysisPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#analysisPeriod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#averageDailyYield -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#averageDailyYield">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#batchNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#batchNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#bodyConditionScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#bodyConditionScore">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#buyerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#buyerName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#calvingDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#calvingDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#crudeProteinPercentage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#crudeProteinPercentage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#diagnosisDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#diagnosisDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#dosageAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#dosageAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#equipmentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#equipmentName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#expiryDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#expiryDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#fatPercentage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#fatPercentage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedQuantityKg -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedQuantityKg">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedingTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedingTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#healthStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#healthStatus">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#inventoryUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#inventoryUnit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isActive -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isActive">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isApproved -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isApproved">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#joiningDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#joiningDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lastMaintenanceDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lastMaintenanceDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#licenseNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#licenseNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#manufacturer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#medicineName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#medicineName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#metabolizableEnergyMJkg -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#metabolizableEnergyMJkg">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#milkTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#milkTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#milkVolume -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#milkVolume">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#offspringGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#offspringGender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#offspringWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#offspringWeight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#operationalStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#operationalStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#passwordHash -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#passwordHash">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#peakYield -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#peakYield">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#proteinPercentage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#proteinPercentage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#purchaseCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#purchaseCost">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#recordDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#recordDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#reorderLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#reorderLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#role -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#role">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#saleDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#saleDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#salePricePerLitre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#salePricePerLitre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#season -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#season">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#SeasonalTrend"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#sessionEndTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#sessionEndTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#sessionStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#sessionStartTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#specialization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#specialization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#stockQuantityKg -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#stockQuantityKg">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#storageTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#storageTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#tagNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#tagNumber">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#totalSaleAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#totalSaleAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#totalYield -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#totalYield">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#treatmentDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#treatmentDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#treatmentOutcome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#treatmentOutcome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#username -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#username">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#volumeSoldLitres -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#volumeSoldLitres">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#withholdingPeriodDays -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#withholdingPeriodDays">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#yearsOfExperience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#yearsOfExperience">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#note">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/age -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/age">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <owl:equivalentProperty rdf:resource="https://schema.org/name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/birthDate -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/birthDate">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/endDate -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/endDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/gender -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/gender">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/name">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/price -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/priceCurrency -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/priceCurrency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/purchaseDate -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/purchaseDate">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/quantity -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/quantity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/serialNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/serialNumber">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/startDate -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/startDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/telephone -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/telephone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Animal -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Animal">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Record -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Record"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Antibiotic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Antibiotic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Dewormer"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vaccine"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vitamin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#consumes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasHealthRecord"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BuffaloCalf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BuffaloCalf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BuffaloHeifer"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BullBuffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryBuffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingBuffalo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BuffaloHeifer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BuffaloHeifer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BullBuffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryBuffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingBuffalo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BullBuffalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#BullBuffalo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryBuffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingBuffalo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CalvingEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#followedByLactation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Concentrate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Concentrate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryFeed"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#GreenForage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Supplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#consumes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasHealthRecord"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowBull -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowBull">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowCalf"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowHeifer"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryCow"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingCow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowCalf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowCalf">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowHeifer"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryCow"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingCow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowHeifer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#CowHeifer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryCow"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingCow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DailyRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DailyRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MonthlyRecord"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#WeeklyRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Dewormer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Dewormer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vaccine"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vitamin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryBuffalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryBuffalo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationStatus"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingBuffalo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryCow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryCow">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationStatus"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingCow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryFeed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#DryFeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#GreenForage"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Supplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#operatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#EveningSession -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#EveningSession">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MorningSession"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#NightSession"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ExternalVet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ExternalVet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#InHouseVet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmMachinery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmMachinery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingEquipment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#supervises"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isSupervisedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FeedingRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Record"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#feedingRecordOf"/>
+                <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FinancialApprover -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FinancialApprover">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#approves"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FullAccessUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FullAccessUser">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#manages"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmOwner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#GreenForage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#GreenForage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Supplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HealthRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Record"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isHealthRecordOf"/>
+                <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#hasTreatmentEvent"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HerdOutput -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#HerdOutput">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#IndividualOutout"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#SeasonalTrend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#InHouseVet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#InHouseVet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#IndividualOutout -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#IndividualOutout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#SeasonalTrend"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#InventoryManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#InventoryManager">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#oversees"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#LivestockManager"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#LivestockManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#LivestockManager">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#supervises"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmManager"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Inventory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isAdministeredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isProducedBy"/>
+                <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#requiresEquipment"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkSale">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#saleGeneratedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingBuffalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingBuffalo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#produces"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingCow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingCow">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#produces"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Cow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkingEquipment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#usedIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MonthlyRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MonthlyRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#WeeklyRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MorningSession -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MorningSession">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#NightSession"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#NightSession -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#NightSession">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#analysisGeneratedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#capturedDuring"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionSession">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#milkRecordedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#FarmWorker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#SeasonalTrend -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#SeasonalTrend">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Supplement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Supplement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#TreatmentEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://schema.org/object"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://schema.org/provider"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vaccine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vaccine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vitamin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#administers"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vitamin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Vitamin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#WeeklyRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#WeeklyRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#ProductionRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- https://disease-ontology.org/diseases -->
+
+    <owl:Class rdf:about="https://disease-ontology.org/diseases">
+        <rdfs:label>Disease</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
