@@ -1194,6 +1194,10 @@
 
     <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
         <owl:equivalentProperty rdf:resource="https://schema.org/name"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Animal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Equipment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1248,6 +1252,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Feed"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Veterinarian"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
