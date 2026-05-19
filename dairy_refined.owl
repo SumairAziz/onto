@@ -551,6 +551,7 @@
     <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#MilkProduction"/>
     <owl:disjointWith rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#User"/>
   </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Event"/>
   <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Buffalo">
     <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Animal"/>
     <rdfs:subClassOf>
