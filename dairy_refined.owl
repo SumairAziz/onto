@@ -1034,4 +1034,14 @@
     <rdfs:range rdf:resource="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#Medicine"/>
   </owl:ObjectProperty>
   <owl:Class rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/Event"/>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isApprovedBy"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isDiagnosedBy"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#lactationFollowsCalving"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isTreatmentEventOf"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isSessionOf"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isConsultedBy"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isConsumedBy"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isHealthRecordOf"/>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sumair/ontologies/2026/3/dairy-farm/#isAdministeredBy"/>
 </rdf:RDF>
